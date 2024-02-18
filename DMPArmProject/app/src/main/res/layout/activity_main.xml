@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/gripText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-350dp"
+        android:layout_marginTop="14dp"
+        android:text="Grip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/slider_one"
+        app:layout_constraintTop_toBottomOf="@+id/title_text" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-760dp"
+        android:text="Robotic Arm\nProject App"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        android:typeface="serif"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/roboticArm"
+        app:layout_constraintStart_toStartOf="@id/arduinoLogo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/roboticArmMotorIdentification"
+        android:layout_width="406dp"
+        android:layout_height="393dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="120dp"
+        android:adjustViewBounds="true"
+        android:clickable="false"
+        android:cropToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arduinoLogo"
+        app:srcCompat="@drawable/our_real_robotic_arm_no_bg" />
+
+    <ImageView
+        android:id="@+id/arduinoLogo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="-300dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arduino_logo" />
+
+    <ImageView
+        android:id="@+id/roboticArm"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="-300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arduino_arm" />
+
+    <ImageView
+        android:id="@+id/rotateLeftLogo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="25dp"
+
+        android:layout_marginTop="20dp"
+        android:src="@drawable/baseline_turn_slight_left_24"
+        app:layout_constraintEnd_toStartOf="@+id/slider_one"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arduinoLogo" />
+
+    <ImageView
+        android:id="@+id/rotateRightLogo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:src="@drawable/baseline_turn_slight_right_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/slider_one"
+        app:layout_constraintTop_toBottomOf="@+id/roboticArm" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider_two"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:contentDescription="Enter How Much Cookies You Want"
+        android:stepSize="1"
+        android:valueFrom="0"
+        android:valueTo="180"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider_one" />
+
+    <ImageView
+        android:id="@+id/rotateLeftLogo1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/baseline_turn_slight_left_24"
+        app:layout_constraintEnd_toStartOf="@+id/slider_two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rotateLeftLogo" />
+
+    <ImageView
+        android:id="@+id/rotateRightLogo1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:src="@drawable/baseline_turn_slight_right_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/slider_one"
+        app:layout_constraintTop_toBottomOf="@id/rotateRightLogo" />
+
+    <com.google.android.material.slider.Slider
+        android:contentDescription="Enter How Much Cookies You Want"
+        android:id="@+id/slider_one"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="55dp"
+        android:valueFrom="0"
+        android:valueTo="90"
+        android:stepSize="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_text" />
+
+    <ImageView
+        android:id="@+id/rotateLeftLogo2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/baseline_turn_slight_left_24"
+        app:layout_constraintEnd_toStartOf="@+id/slider_two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rotateLeftLogo1" />
+
+    <ImageView
+        android:id="@+id/rotateRightLogo2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="25dp"
+        android:src="@drawable/baseline_turn_slight_right_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rotateRightLogo1" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider_three"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:contentDescription="Enter How Much Cookies You Want"
+        android:stepSize="1"
+        android:valueFrom="0"
+        android:valueTo="180"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider_two" />
+
+    <ImageView
+        android:id="@+id/rotateLeftLogo3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/baseline_turn_slight_left_24"
+        app:layout_constraintEnd_toStartOf="@+id/slider_three"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rotateLeftLogo2" />
+
+    <ImageView
+        android:id="@+id/rotateRightLogo3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="25dp"
+        android:src="@drawable/baseline_turn_slight_right_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/slider_three"
+        app:layout_constraintTop_toBottomOf="@id/rotateRightLogo2" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider_four"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:contentDescription="Enter How Much Cookies You Want"
+        android:stepSize="1"
+        android:valueFrom="0"
+        android:valueTo="180"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider_three" />
+
+    <ImageView
+        android:id="@+id/rotateLeftLogo4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/baseline_turn_slight_left_24"
+        app:layout_constraintEnd_toStartOf="@+id/slider_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roboticArmMotorIdentification" />
+
+    <ImageView
+        android:id="@+id/rotateRightLogo4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="25dp"
+        android:src="@drawable/baseline_turn_slight_right_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/slider_five"
+        app:layout_constraintTop_toBottomOf="@id/roboticArmMotorIdentification" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider_five"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:contentDescription="Enter How Much Cookies You Want"
+        android:stepSize="1"
+        android:valueFrom="0"
+        android:valueTo="180"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roboticArmMotorIdentification" />
+
+    <ImageView
+        android:id="@+id/rotateLeftLogo5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/baseline_turn_slight_left_24"
+        app:layout_constraintEnd_toStartOf="@+id/slider_six"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rotateLeftLogo4" />
+
+    <ImageView
+        android:id="@+id/rotateRightLogo5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="25dp"
+        android:src="@drawable/baseline_turn_slight_right_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/slider_six"
+        app:layout_constraintTop_toBottomOf="@id/rotateRightLogo4" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider_six"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:contentDescription="Enter How Much Cookies You Want"
+        android:stepSize="1"
+        android:valueFrom="0"
+        android:valueTo="180"
+        android:value="90"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider_five" />
+
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:text="Discover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider_six" />
+
+    <ImageView
+        android:id="@+id/gripLine"
+        android:layout_width="97dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="-100dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="-30dp"
+        android:rotationY="-180"
+        app:layout_constraintBottom_toTopOf="@+id/wristPitchLine"
+        app:layout_constraintStart_toEndOf="@+id/wristPitchLine"
+        app:layout_constraintTop_toBottomOf="@+id/slider_four"
+        app:srcCompat="@drawable/direct_line_no_bg" />
+
+    <ImageView
+        android:id="@+id/wristPitchLine"
+        android:layout_width="127dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="-15dp"
+        android:layout_marginEnd="-370dp"
+        android:rotationY="-180"
+        app:layout_constraintEnd_toStartOf="@+id/roboticArmMotorIdentification"
+        app:layout_constraintTop_toBottomOf="@+id/gripLine"
+        app:srcCompat="@drawable/direct_line_no_bg" />
+
+    <ImageView
+        android:id="@+id/wristRollLine"
+        android:layout_width="154dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="-340dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@+id/roboticArmMotorIdentification"
+        app:layout_constraintTop_toBottomOf="@+id/slider_four"
+        app:srcCompat="@drawable/direct_line_no_bg" />
+
+    <ImageView
+        android:id="@+id/elbowLine"
+        android:layout_width="98dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="-380dp"
+        app:layout_constraintStart_toEndOf="@+id/roboticArmMotorIdentification"
+        app:layout_constraintTop_toBottomOf="@+id/wristRollLine"
+        app:srcCompat="@drawable/direct_line_no_bg" />
+
+    <ImageView
+        android:id="@+id/shoulderLine"
+        android:layout_width="148dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="-190dp"
+        android:layout_marginTop="52dp"
+        android:rotationY="-180"
+        app:layout_constraintStart_toEndOf="@+id/roboticArmMotorIdentification"
+        app:layout_constraintTop_toBottomOf="@+id/wristPitchLine"
+        app:srcCompat="@drawable/direct_line_no_bg" />
+
+    <ImageView
+        android:id="@+id/waistLine"
+        android:layout_width="166dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="-380dp"
+        android:layout_marginTop="-130dp"
+        app:layout_constraintStart_toEndOf="@+id/roboticArmMotorIdentification"
+        app:layout_constraintTop_toBottomOf="@+id/roboticArmMotorIdentification"
+        app:srcCompat="@drawable/direct_line_no_bg" />
+
+    <TextView
+        android:id="@+id/wristRollTextImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-400dp"
+        android:layout_marginTop="-285dp"
+        android:text="Wrist Roll"
+        app:layout_constraintStart_toEndOf="@+id/roboticArmMotorIdentification"
+        app:layout_constraintTop_toBottomOf="@+id/roboticArmMotorIdentification" />
+
+    <TextView
+        android:id="@+id/gripTextImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-295dp"
+        android:layout_marginEnd="-395dp"
+        android:text="Grip"
+        app:layout_constraintEnd_toStartOf="@+id/roboticArmMotorIdentification"
+        app:layout_constraintTop_toBottomOf="@+id/roboticArmMotorIdentification" />
+
+    <TextView
+        android:id="@+id/wristPitchImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-40dp"
+        android:text="Wrist\nPitch"
+        app:layout_constraintStart_toEndOf="@+id/wristPitchLine"
+        app:layout_constraintTop_toBottomOf="@+id/wristPitchLine" />
+
+    <TextView
+        android:id="@+id/elbowTextImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-245dp"
+        android:layout_marginEnd="-45dp"
+        android:text="Elbow"
+        app:layout_constraintEnd_toStartOf="@+id/roboticArmMotorIdentification"
+        app:layout_constraintTop_toBottomOf="@+id/roboticArmMotorIdentification" />
+
+    <TextView
+        android:id="@+id/shoulderTextImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-15dp"
+        android:layout_marginTop="-35dp"
+        android:text="Shoulder"
+        app:layout_constraintStart_toEndOf="@+id/shoulderLine"
+        app:layout_constraintTop_toBottomOf="@+id/shoulderLine" />
+
+    <TextView
+        android:id="@+id/waistTextImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="-135dp"
+        android:text="Waist"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roboticArmMotorIdentification" />
+
+    <TextView
+        android:id="@+id/wristPitchText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-8dp"
+        android:layout_marginEnd="-190dp"
+        android:text="Wrist Pitch"
+        app:layout_constraintEnd_toStartOf="@+id/slider_two"
+        app:layout_constraintTop_toBottomOf="@+id/slider_one" />
+
+    <TextView
+        android:id="@+id/wristRollText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-175dp"
+        android:layout_marginTop="-8dp"
+        android:text="Wrist Roll"
+        app:layout_constraintStart_toEndOf="@+id/slider_two"
+        app:layout_constraintTop_toBottomOf="@+id/slider_two" />
+
+    <TextView
+        android:id="@+id/elbowText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-170dp"
+        android:layout_marginTop="-8dp"
+        android:text="Elbow"
+        app:layout_constraintStart_toEndOf="@+id/slider_four"
+        app:layout_constraintTop_toBottomOf="@+id/slider_three" />
+
+    <TextView
+        android:id="@+id/shoulderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-230dp"
+        android:layout_marginTop="-8dp"
+        android:text="Shoulder"
+        app:layout_constraintStart_toEndOf="@+id/roboticArmMotorIdentification"
+        app:layout_constraintTop_toBottomOf="@+id/roboticArmMotorIdentification" />
+
+    <TextView
+        android:id="@+id/waistText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-170dp"
+        android:layout_marginTop="-8dp"
+        android:text="Waist"
+        app:layout_constraintStart_toEndOf="@+id/slider_five"
+        app:layout_constraintTop_toBottomOf="@+id/slider_five" />
+
+    <ListView
+        android:id="@+id/devicesList"
+        android:layout_width="176dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="200dp"
+        app:layout_constraintStart_toStartOf="@id/slider_three"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
